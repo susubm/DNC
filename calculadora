@@ -1,0 +1,29 @@
+def calculadora():
+    x = 'Y'
+    while x == ('Y' or 'y'):
+        esc = input('Escolha uma operação: + para soma, - para subtração, * para multiplicação e / para divisão: ')
+        while not (a := input('Digite o primeiro número inteiro: ')).isdigit():
+            print('Valor inválido')
+        while not (b := input('Digite o segundo número inteiro: ')).isdigit():
+            print('Valor inválido')
+        resultado = 0
+
+        if esc == ('+'):
+            resultado = float(a) + float(b)
+            print('A soma é =', resultado)
+        elif esc == ('-'):
+            resultado = float(a) - float(b)
+            print('A subtração é =', resultado)
+        elif esc == ('*'):
+            resultado = float(a) * float(b)
+            print('A multiplicação é =', resultado)
+        elif esc == ('/'):
+            resultado = float(a) / float(b)
+            print('A divisão é =', resultado)
+        else:
+            print('Operação não existente!')
+        
+        x = input('Deseja fazer outra operação? Digite Y ou N: ')
+
+
+calculadora()
