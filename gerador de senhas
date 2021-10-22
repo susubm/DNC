@@ -1,0 +1,23 @@
+from random import random,choice
+import string
+
+print("#### Gerador de senha ####")
+valores = ""
+while not (tam := input('Digite o tamanho da senha: ')).isdigit():
+    print('Valor inválido!')
+if (a := input('Incluir Letras Maiusculas e Minúsculas? S ou N ')).upper() == 'S':
+    valores = string.ascii_letters
+else:
+    pass
+if (a := input('Incluir Números? S ou N ')).upper() == 'S':
+    valores += string.digits
+else:
+    pass
+if (a := input('Incluir Caracteres especiais? S ou N ')).upper() == 'S':
+    valores += string.punctuation
+else:
+    pass
+senha = ''
+for i in range(int(tam)):
+    senha += choice(valores)
+print(senha)
